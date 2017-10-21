@@ -1,4 +1,4 @@
-- [总体说明](/#main)
+- [总体说明](/?id=main)
 
 - 任务分类
   - [Python 数据处理方向](/tasks/python-data-mining)

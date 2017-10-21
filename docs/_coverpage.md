@@ -10,4 +10,4 @@
 
 
 [GitHub](https://github.com/wncg/recruit-assessment)
-[Get Started](#wncg-入门考核任务)
+[Get Started](?id=main)
