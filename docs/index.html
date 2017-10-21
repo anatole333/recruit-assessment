@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>WNCG - Wireless and Networking Communications Group</title>
   <meta name="description" content="WNCG recruitment assessment task">
+  <meta rel="shortcut icon" href="./favicon.ico" />
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
 </head>
@@ -11,7 +12,7 @@
   <div id="app"></div>
 </body>
 <script>
-  var repo = 'https://github.com/wncg/recruit-assessment';
+  var repo = 'https://github.com/wncg/recruit-assessment'
   window.$docsify = {
     name: '<b>WNCG 考核任务</b><br>GUIDE',
     
@@ -46,21 +47,24 @@
     plugins: [
       function(hook, vm) {
         hook.beforeEach(function (html) {
-          var url = repo + '/blob/master/docs/' + vm.route.file
-          var editHtml = '[Edit Document](' + url + ')\n'
+          var url = repo + '/edit/master/docs/' + vm.route.file
           var updateTime = 'Last update in {docsify-updated} | '
+          var editHtml = '[Edit Document](' + url + ')\n'
+          var poweredBy =  'Powered by [docsify](https://github.com/QingWei-Li/docsify/) | '
+          var goToTop = 'go back [to top](#main)'
           return updateTime
             + editHtml
             + html
             + '\n----\n'
-            + updateTime
-            + editHtml
+            + poweredBy
+            + goToTop
         })
       }
     ]
   }
   
   if (window.location.hostname !== 'localhost' && typeof navigator.serviceWorker !== 'undefined') {
+    console.info('Service Worker will register.')
     navigator.serviceWorker.register('sw.js')
   }
 </script>
